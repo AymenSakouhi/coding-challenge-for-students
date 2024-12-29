@@ -5,30 +5,15 @@ const TodoList = () => {
   const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!inputValue.trim()) return;
-
-    setTodos([
-      ...todos,
-      {
-        id: Date.now(),
-        text: inputValue,
-        completed: false,
-      },
-    ]);
-    setInputValue("");
+    // add your code here
   };
 
   const toggleTodo = (id) => {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo,
-      ),
-    );
+    // add your code here
   };
 
   const deleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    // add your code here
   };
 
   return (
@@ -83,9 +68,7 @@ const TodoList = () => {
       </div>
 
       <div className="mt-4 text-sm text-gray-600">
-        {todos.length === 0
-          ? "No todos yet. Add one above!"
-          : `${todos.filter((t) => !t.completed).length} items remaining`}
+        {/* add a code here to show the number of items remaining */}
       </div>
     </div>
   );
